@@ -7,41 +7,39 @@
 <body>
     <script>
         var binding = {
-            values: {
-                arrow: {
-                    width: [
-                        {
-                            attr: "largeur"
+            arrow: {
+                width: [
+                    {
+                        attr: "largeur"
+                    }
+                ],
+                className: [
+                    {
+                        attr: "arrow",
+                        binding: {
+                            true: "visible",
+                            false: ""
                         }
-                    ],
-                    className: [
-                        {
-                            attr: "arrow",
-                            binding: {
-                                true: "visible",
-                                false: ""
-                            }
-                        },{
-                            attr: "hasFocus",
-                            binding: {
-                                arrow: "focus",
-                                "*": ""
-                            }
+                    },{
+                        attr: "hasFocus",
+                        binding: {
+                            arrow: "focus",
+                            "*": ""
                         }
-                    ]
-                },
-                rect: {
-                    style: [
-                        "color: ",
-                        {
-                            attr: "color",
-                            binding: {
-                                "RAL 1000": "#BEBD7F",
-                                "RAL 2005": "#FF2301"
-                            }
+                    }
+                ]
+            },
+            rect: {
+                style: [
+                    "color: ",
+                    {
+                        attr: "color",
+                        binding: {
+                            "RAL 1000": "#BEBD7F",
+                            "RAL 2005": "#FF2301"
                         }
-                    ]
-                }
+                    }
+                ]
             }
         };
 
