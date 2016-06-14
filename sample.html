@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sample Config Binder</title>
+    <script src="dist/ConfigBinder.js"></script>
 </head>
 <body>
     <script>
@@ -31,7 +32,7 @@
             },
             rect: {
                 style: [
-                    "color: ",
+                    "color:",
                     {
                         attr: "color",
                         binding: {
@@ -49,6 +50,10 @@
             hasFocus: "arrow",
             color: "RAL 2005"
         };
+
+        var cfgBinder = new ConfigBinder(binding);
+        var out = cfgBinder.convert(cfg);
+        console.log(out);
 
         // Out 1 is I think the best : it auto-joins the array with " ". Maybe it can be an option?
         // Out 2 is without auto-join.
