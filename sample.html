@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Config Binder</title>
+</head>
+<body>
+    <script>
+        var binding = {
+            values: {
+                arrowClasses: {
+                    arrow: "[boolean:visible]",
+                    hasFocus: "[setFocusIf:arrow]"
+                },
+                rect: {
+                    colorRAL: "[RalToHex]"
+                }
+            },
+            templates: {
+                boolean: {
+                    true: "$1",
+                    false: ""
+                },
+                setFocusIf: {
+                    "$1": "focus",
+                    "*": ""
+                },
+                RalToHex: {
+                    "RAL 1000": "#BEBD7F",
+                    "RAL 2005": "#FF2301"
+                }
+            }
+        };
+
+        var cfg = {
+            arrow: true,
+            hasFocus: "arrow",
+            colorRAL: "RAL 2005"
+        };
+
+        var out = {
+            arrowClasses: "visible focus",
+            rect: "#FF2301"
+        };
+    </script>
+</body>
+</html>
