@@ -1,6 +1,6 @@
 {
   "name": "config-binder",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Config binder. You give something in and you got something out.",
   "main": "dist/ConfigBinder.js",
   "dependencies": {},

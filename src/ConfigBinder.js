@@ -1,5 +1,5 @@
 
-class ConfigBinder {
+module.exports = class ConfigBinder {
     constructor(binding, options = {}) {
         this._binding = binding;
 
